@@ -52,9 +52,9 @@ public class Post {
     private Category category;
 
 
-    @OneToMany(mappedBy = "post",cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "post",cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<LikedItems> likedItems;
 
-    @OneToMany(mappedBy = "post",cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "post",cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Comment> comments;
 }
